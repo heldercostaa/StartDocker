@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  start-docker: # The Service name
+    build: . # Where the Dockerfile is
+    command: npm start # Command to run when the application start
+    ports:
+      - "3332:3332" # Port redirect
+    volumes:
+      - .:/usr/start-docker # From which folder to reflect the changes
+
+###
+
+# Start docker compose
+# $ docker-compose up
+
+###
